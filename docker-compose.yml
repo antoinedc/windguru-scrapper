@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  web:
+    volumes:
+      - ./:/app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    command: node index.js
